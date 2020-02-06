@@ -1,16 +1,58 @@
 @import "~bootstrap/scss/bootstrap.scss";
-
-/* 
-    body{
-        background: #BDBDBD;
-    }
-    
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+* {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+html {
+  width: 100%;
+  height: 100%;
+  background: forestgreen;
+  box-shadow: inset rgba 200px;
+}
+html:before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 100%;
+  top: calc(50% - 115px);
+  left: calc(50% - 50px);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 30px, inset black 0 10px 15px,
+    inset rgba(0, 0, 0, 0.3) 0 0 50px;
+  border: 25px solid #222;
+  z-index: 10;
+}
+html:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 250;
+  position: fixed;
+  border-radius: 15px;
+  top: calc(50% - 40px);
+  left: calc(50% - 25px);
+  background: #222;
+  z-index: 5;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 30px, #210 25px 100px 0,
+    #210 -25px 100px 0;
+}
+body {
+  margin: 0;
+  width: 200px;
+  position: fixed;
+  border-radius: 100%;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  background: #222;
+  color: black;
+  text-align: center;
+  font-size: 360px;
+  font-weight: 300;
+  line-height: 0.33;
+  z-index: 1;
+  text-indent: -0.022em;
+  transition: all 0.2s ease-in-out;
+  font-family: "Source Code Pro", monospace;
+}
